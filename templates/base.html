@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html lang="en">
+<head>
+     <title>{% block title_block %}Title{% endblock %}</title>
+
+     <!--  require meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- load all bootstrap files -->
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type="text/css">
+     <link rel="stylesheet" type="text/css" href="{% static  'Skills/CSS/base_file.css'%}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+</head>
+<body>
+
+<!-- top nav bar of webiste -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<li class="nav-item active">
+  <a class="navbar-brand" href="{% url 'home' %}">
+  {% load static %}
+    <img src="{% static 'Skills/Images/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+   Indian Sports Search
+  </a>
+  </li>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      
+        <a class="nav-link" href="#">Quiz<span class="sr-only">(current)</span></a>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#">Featured</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact_team' %}">Conatct</a>
+      </li>
+
+    </ul>
+
+    <!-- Right side comtent -->
+        <!-- dropdown regitration page for different commuity -->
+    <div class="dropdown show">
+    {% if user.is_authenticated %}
+          <ul class="nav navbar-nav navbar-right">
+               <form class="form-inline my-2 my-lg-0">
+               <input class="form-control mr-sm-2" type="search" placeholder="Search any sports" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+               </form>
+              &nbsp;
+              <li><a class="btn btn-danger" href="{% url 'accounts:logout' %}">Logout</a></li>
+          </ul>
+
+    {% else %}
+     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Register
+     </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="#">Community Registration</a>
+      <a class="dropdown-item" href="{% url 'accounts:School_signup' %}">School Registration</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Simple Register</a>
+  </div>
+</div>
+&nbsp;
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search any sports" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    &nbsp;
+    <a class="btn btn-info btn-md" href="{% url 'accounts:login' %}">
+    Login
+    </a>
+    {% endif %}
+  </div>
+
+</nav>
+</nav>
+<!-- end of top nav bar -->
+
+
+
+
+<!-- template of index file -->
+{% block content %}
+{% endblock %}
+
+
+<!-- template of contact file -->
+{% block contect %}
+{% endblock %}
+
+<!-- template of User signup form -->
+{% block signupContent %}
+{% endblock %}
+
+<!-- tmeplate of user login form -->
+{% block loginContent %}
+{% endblock %}
+
+<!-- <div class="navbar navbar-inverse">
+    <footer class="container-fluid bg-2 text-center">
+  <center><p>Website Design and Developed  By Team<a href=""><strong>@H<sup>3</sup></strong>Hardik Dadhich</center></a></p> 
+</footer>
+</div> -->
+<footer>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-bottom" id="mainNav"  style="background-color: rgba(0,0, 0, 10); ">
+      <div class="container" style="text-transform: capitalize; ">
+        <a class="navbar-brand" href="{% url 'contact_team' %}" style="color: white">Meet Developers</a>
+       
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bnavbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Base Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="bnavbarResponsive">
+          <ul class="navbar-nav ml-auto">
+           
+            <li class="nav-item">
+              <a class="nav-link " href="#" style="color: white">Disclaimer</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="#" style="color: white">Privacy Policy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" style="color: white">Terms Of Service</a>
+            </li>
+       
+           
+ 
+             
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+      <div class="container text-center">
+        <p style="color: black: White">Copyright &copy; 2018 @H<sup>3</sup> Teams</p>
+
+      </div>
+
+
+      
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+
+{% block title_block %}Contact develper{% endblock %}
+{% load staticfiles %}  
+  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ -->
+
+{% block contect %}
+
+  <style>
+
+  /*body content css starts here*/
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #d1ac00; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+/*  body content css ends here*/
+
+/*social media bar css*/
+  .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+/*social meadia css ended here*/
+  </style>
+</head>
+
+
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Hardik Dadhich</h3>
+  <img src="{% static 'Skills/Images/hardik.png' %}" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+    <p>Hi , I am Full Stack Django Developer and Founder of Tech Leading Comapany <strong>H<sup>3</sup></strong>. I am Tech-Enthusiast,Developer and Travelling Lover.Currently I am Working with my team on making Human life more Easier with new Tech Solution. </p>
+    <p>Do Support And Be with us!</p>
+    <h3>I'm an Entreprenure</h3>
+    <div class="row">
+        <div class="list inline">
+
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-google"></a>
+       </div>
+    </div>
+
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Avinash jain</h3>
+  <img src="" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <h3>I'm an Developer</h3>
+  <div class="row">
+    <ul class="list inline">
+
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-google"></a>
+   </ul>
+
+    </div>
+</div>
+
+<!-- Third Container (Grid) -->
+<!-- <div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Where To Find Me?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div> -->
+
+
+<!-- third container -->
+<div class="container-fluid bg-3 text-center">
+  <h3 class="margin">Atul Goyal</h3>
+  <img src="" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <h3>I'm an developer</h3>
+  <div class="row">
+    <ul class="list inline margin">
+
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-google"></a>
+   </ul>
+
+    </div>
+</div>
+
+
+<!-- fourth section -->
+
+<div class="container-fluid bg-4 text-center">
+  <h3 class="margin">Abhijeet Yadav</h3>
+
+  <img src="" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <h3>I'm an Developer</h3>
+<div class="row">
+    <ul class="list inline">
+
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-google"></a>
+   </ul>
+
+    </div>
+</div>
+
+{% endblock %}
